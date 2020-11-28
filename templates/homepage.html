@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Hello!</title>
+{% for item in dockets %}
+{{ item.id }}
+<ul>
+  <li>{{ item.defendant }}</li>
+  <li>{{ item.birthdate }}</li>
+  <li>{{ item.race }}</li>
+  <li>{{ item.sex }}</li>
+  <li>{{ item.complaint }}</li>
+  <li>{{ item.arresting_officer }}</li>
+  <li><a href="/judge/{{ item.hearing_judge }}">{{ item.hearing_judge }}</a></li>
+</ul>
+<div>
+{% endfor %} 
